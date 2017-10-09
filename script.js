@@ -4,18 +4,18 @@ $(document).ready(function() {
     $("body").append($(`<h3 id="${n}">Accusation ${n}</h3>`));
   }
 
-  function createH3Alt(m) {
-    header.innerHTML = `Accusation ${m}`;
+  function createH3Alt(n) {
+    header.innerHTML = `Accusation ${n}`;
   }
 
   function alertMessage1(n) {
     alert(`Accusation ${n}: I accuse ${friends[n%friends.length]}, with ${weapons[n%weapons.length]} in ${locations[n%locations.length]}!`);
   }
 
-  function alertMessage2(m) {
+  function alertMessage2(n) {
     return function() {
-      console.log(m);
-      alert(`Accusation ${m}: I accuse ${friends[m%friends.length]}, with ${weapons[m%weapons.length]} in ${locations[m%locations.length]}!`);      
+      console.log(n);
+      alert(`Accusation ${n}: I accuse ${friends[n%friends.length]}, with ${weapons[n%weapons.length]} in ${locations[n%locations.length]}!`);      
     }
   }
 
